@@ -1,0 +1,173 @@
+                     *,
+                      ::after,
+                      ::before {
+                         margin: 0;
+                         padding: 0;
+                         box-sizing: border-box;
+                     }
+                     
+                     body {
+                         background-color: #181063;
+                     }
+                     
+                     h1 {
+                         text-align: center;
+                         color: #ffffff;
+                     }
+                     
+                     img {
+                         width: 40px;
+                     }
+                     
+                     .tab {
+                         margin-top: 60px;
+                         margin-bottom: 60px;
+                     }
+                     
+                     .ligne {
+                         width: 60%;
+                         height: 60px;
+                         display: flex;
+                         justify-content: space-evenly;
+                         align-items: center;
+                         background-color: #0061fe;
+                         margin-bottom: 10px;
+                     }
+                     
+                     .agbr {
+                         background-color: #0061fe;
+                         height: 50px;
+                     }
+                     
+                     td {
+                         padding-left: 5px;
+                     }
+                     
+                     .score {
+                         width: 150px;
+                         height: 60px;
+                         line-height: 60px;
+                         background-color: #fff;
+                         clip-path: polygon(30% 0, 100% 0%, 70% 100%, 0% 100%);
+                     }
+                     
+                     button {
+                         width: 100%;
+                         height: 10vh;
+                         background-color: #fff;
+                         border: none;
+                     }
+                     
+                     button {
+                         width: 100%;
+                         height: 10vh;
+                         background-color: #fff;
+                         border: none;
+                         color: rgb(23, 190, 23);
+                         font-weight: bold;
+                     }
+                     
+                     .score {
+                         color: black;
+                         font-weight: initial;
+                     }
+                     
+                     #Niveau2 {
+                         margin-bottom: 0;
+                         margin-top: 10px;
+                     }
+                     
+                     .prolongation {
+                         color: white;
+                     }
+                     
+                     .prlgBox1None,
+                     .prlgBox2 {
+                         display: none;
+                     }
+                     
+                     .Box {
+                         -webkit-animation-name: design;
+                         animation-name: design;
+                         -webkit-animation-duration: 1s;
+                         animation-duration: 1.5s;
+                         -webkit-animation-fill-mode: both;
+                         animation-fill-mode: both;
+                     }
+                     
+                     .statistic {
+                         width: 60%;
+                         background-color: #000363c2;
+                     }
+                     
+                     @-webkit-keyframes design {
+                         0% {
+                             opacity: 0;
+                             -webkit-transform: translate3d(0, -100%, 0);
+                             transform: translate3d(0, -100%, 0);
+                         }
+                         100% {
+                             opacity: 1;
+                             -webkit-transform: none;
+                             transform: none;
+                         }
+                     }
+                     
+                     @keyframes design {
+                         0% {
+                             opacity: 0;
+                             -webkit-transform: translate3d(0, -100%, 0);
+                             transform: translate3d(0, -100%, 0);
+                         }
+                         100% {
+                             opacity: 1;
+                             -webkit-transform: none;
+                             transform: none;
+                         }
+                     }
+                     
+                     .statisticNone {
+                         display: none;
+                     }
+                     
+                     .statistic p {
+                         /* color: gray; */
+                         color: gold;
+                         font-family: Tw Cen MT;
+                     }
+                     
+                     .statTable {
+                         width: 100%;
+                         color: white;
+                     }
+                     
+                     .statTable td {
+                         text-align: center;
+                     }
+                     
+                     .td1 {
+                         background: #101c4a;
+                         border-collapse: initial;
+                     }
+                     
+                     .td2 {
+                         background: #081431;
+                     }
+                     
+                     .td3 {
+                         background: #101c4a;
+                     }
+                     
+                     @media(max-width: 800px) {
+                         body {
+                             overflow-x: hidden;
+                         }
+                         .tab,
+                         .agbr {
+                             width: 100%;
+                         }
+                         .ligne {
+                             justify-content: none;
+                             width: 100%;
+                         }
+                     }

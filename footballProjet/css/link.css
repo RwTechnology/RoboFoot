@@ -1,0 +1,38 @@
+.boxLink {
+    border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 70px;
+}
+
+.boxLink a {
+    border-radius: 10px;
+    color: white;
+    background-color: #0061fe;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.boxLink a:hover {
+    background-color: #000084;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: Century Gothic;
+}
+
+.logo img {
+    width: 55px;
+}
+
+#suivant {
+    opacity: 0;
+}

@@ -1,0 +1,136 @@
+    *,
+     ::after,
+     ::before {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        background: url('../assets/image/istockphoto-1249117045-170667a.jpg');
+        background-size: cover;
+    }
+    
+    .container {
+        margin-top: 0;
+        background: rgba(17, 15, 15, 0.5);
+        height: 100vh;
+        width: 100%;
+        color: white;
+    }
+    
+    header {
+        text-align: center;
+    }
+    
+    .container2 {
+        display: flex;
+        justify-content: center;
+        margin-top: 3%;
+    }
+    
+    .container2 table {
+        background: rgba(0, 0, 0, 0.7);
+        width: 80%;
+        height: 100%;
+    }
+    
+    .container2 table .cellDrapeau {
+        width: 7%;
+    }
+    
+    .container2 table th,
+    .container2 table td {
+        padding-top: 3%;
+    }
+    
+    .container2 img {
+        width: 70px;
+    }
+    
+    #t1 {
+        background: linear-gradient(#ccecfb, #013358);
+        padding: auto;
+    }
+    
+    #button {
+        color: #fff;
+        text-transform: uppercase;
+        padding: 12px 36px;
+        font-size: 18px;
+        letter-spacing: 2px;
+        border-radius: 40px;
+        border: white 1px solid;
+        background: linear-gradient(90deg, #0162c8, #55e7fc);
+    }
+    
+    #button:active {
+        border: black 1px solid;
+    }
+    
+    #button:hover {
+        background: linear-gradient(90deg, #55e7fc, #0162c8);
+        transform-style: preserve-3d;
+        transform: scale(1.02);
+        transition: all ease-in-out 0.3s;
+        cursor: pointer;
+    }
+    
+    .container3 {
+        padding: 5% 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #container4 {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    #container4 table img {
+        width: 100px;
+    }
+    
+    #container4 table td {
+        padding: 5% 0;
+    }
+    
+    #container4 table .cellDrapeau {
+        width: 15%;
+    }
+    
+    @media(max-width: 800px) {
+        .container {
+            overflow-x: hidden;
+        }
+        .container2 {
+            width: 100%;
+        }
+        .container2 table {
+            width: 40%;
+        }
+        .container2 img {
+            width: 25px;
+        }
+        .container2 table .cellDrapeau {
+            width: 10%;
+        }
+        .container3 {
+            width: 100%;
+        }
+        #container4 {
+            margin: 0 10px;
+        }
+        .cellDrapeau {
+            width: 20px;
+        }
+        .trophee img {
+            display: none;
+        }
+    }
