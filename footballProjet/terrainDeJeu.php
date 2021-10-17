@@ -49,11 +49,17 @@ include 'source/organisateur.php';
                         </tr>
                     </table>
                     <div class="score">
-                        <form action="" method="post">
-                            <button type="submit" title="click here" name="submit<?= $i + 1 ?>" <?php if ($_SESSION[$match][0] == false) { ?> disabled="disabled" class="score" <?php  } ?>>
-                                <?php if ($_SESSION[$match][1] == false) {
-                                    echo "JOUER";
-                                } else {
+                      
+                            <div id="btn">
+                                <?php if ($_SESSION[$match][1] == false) { ?>
+                                    <form action="" method="post">
+                                 <input type="number" min="0" max="10" name="scr1M<?= $i + 1 ?>" <?php if ($_SESSION[$match][0] == false) { ?> disabled="disabled" class="score" <?php  } ?>> -
+                                 <input type="number" min="0" max="10" name="scr2M<?= $i + 1 ?>" <?php if ($_SESSION[$match][0] == false) { ?> disabled="disabled" class="score" <?php  } ?>>
+                                 <div class="submit">
+                                 <input type="submit"   name="submit<?= $i + 1 ?>" <?php if ($_SESSION[$match][0] == false) { ?> disabled="disabled" class="score" <?php  } ?>>
+                                 </div>
+                                 </form>
+                              <?php  } else {
                                     if ($i < 2) {
                                         echo $_SESSION[$equipe[0]]['scores'][0] . " - " . $_SESSION[$equipe[1]]['scores'][0];
                                     } elseif ($i < 4) {
@@ -72,9 +78,7 @@ include 'source/organisateur.php';
                                 <?php
                                 }
                                 ?>
-                            </button>
-
-                        </form>
+                            </div>
 
                     </div>
                     <table class="agbr">
@@ -105,11 +109,16 @@ include 'source/organisateur.php';
                         </tr>
                     </table>
                     <div class="score">
-                        <form action="" method="post">
-                            <button type="submit" title="click here" name="submit<?= $i + 7 ?>" <?php if ($_SESSION[$match][0] == false) { ?> disabled="disabled" class="score" <?php  } ?>>
-                                <?php if ($_SESSION[$match][1] == false) {
-                                    echo "JOUER";
-                                } else {
+                            <div id="btn">
+                                <?php if ($_SESSION[$match][1] == false) { ?>
+                                    <form action="" method="post">
+                                    <input type="number" min="0" max="10"  name="scr1M<?= $i + 7 ?>" <?php if ($_SESSION[$match][0] == false) { ?> disabled="disabled" class="score" <?php  } ?>> -
+                                 <input type="number" min="0" max="10"  name="scr2M<?= $i + 7 ?>" <?php if ($_SESSION[$match][0] == false) { ?> disabled="disabled" class="score" <?php  } ?>>
+                                 <div class="submit">
+                                 <input type="submit" name="submit<?= $i + 7 ?>" <?php if ($_SESSION[$match][0] == false) { ?> disabled="disabled" class="score" <?php  } ?>>
+                                 </div>
+                                 </form>
+                              <?php  } else {
                                     if ($i < 2) {
                                         echo $_SESSION[$equipe[0]]['scores'][0] . " - " . $_SESSION[$equipe[1]]['scores'][0];
                                     } elseif ($i < 4) {
@@ -137,8 +146,7 @@ include 'source/organisateur.php';
                                 <?php
                                 }
                                 ?>
-                            </button>
-                        </form>
+                            </div>
                     </div>
                     <table class="agbr">
                         <tr>

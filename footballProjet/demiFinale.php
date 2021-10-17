@@ -58,17 +58,21 @@ if (isset($_POST['submitplg14']) && $_SESSION['dFInfo']['match14']['prolongation
                     </tr>
                 </table>
                 <div class="score">
-                    <form action="" method="post">
-                        <button type="submit" title="click here" name="submit13" <?php if ($_SESSION['match13'][0] == false) { ?> disabled="disabled" class="score" <?php  } ?>>
+                        <div id="btn">
                             <?php
-                            if ($_SESSION["match13"][1] == false) {
-                                echo "JOUER";
-                            } else {
+                            if ($_SESSION["match13"][1] == false) { ?>
+                                    <form action="" method="post">
+                                    <input type="number" min="0" max="10"  name="scr1M13" <?php if ($_SESSION['match13'][0] == false) { ?> disabled="disabled " class="score" <?php  } ?>> -
+                                    <input type="number" min="0" max="10"  name="scr2M13" <?php if ($_SESSION['match13'][0] == false) { ?> disabled="disabled " class="score" <?php  } ?>> 
+                                    <div class="submit">
+                                 <input type="submit" name="submit13" <?php if ($_SESSION['match13'][0] == false) { ?> disabled="disabled" class="score" <?php  } ?>>
+                                 </div>
+                                    </form>
+                         <?php   } else {
                                 echo  $_SESSION['dFInfo']['match13']['equipe1']['score'] . " - " . $_SESSION['dFInfo']['match13']['equipe2']['score'];
                             }
                             ?>
-                        </button>
-                    </form>
+                        </div>
                 </div>
                 <table class="agbr">
                     <tr>
@@ -90,17 +94,22 @@ if (isset($_POST['submitplg14']) && $_SESSION['dFInfo']['match14']['prolongation
                         </tr>
                     </table>
                     <div class="score">
-                        <form action="" method="post">
-                            <button type="submit" title="click here" name="submitplg13" <?php if ($_SESSION['dFInfo']['match13']['prolongation']['etat'][0] == false) { ?> disabled="disabled" class="score" <?php  } ?>>
+                    
+                            <div id="btn">
                                 <?php
-                                if ($_SESSION['dFInfo']['match13']['prolongation']['etat'][0]) {
-                                    echo "JOUER";
-                                } else {
+                                if ($_SESSION['dFInfo']['match13']['prolongation']['etat'][0]) {?>
+                                <form action="" method="post">
+                                    <input type="number" min="0" max="10"  name="scr1M13" <?php if ($_SESSION['dFInfo']['match13']['prolongation']['etat'][0]== false) { ?> disabled="disabled " class="score" <?php  } ?>> -
+                                    <input type="number" min="0" max="10"  name="scr2M13" <?php if ($_SESSION['dFInfo']['match13']['prolongation']['etat'][0]== false) { ?> disabled="disabled " class="score" <?php  } ?>> 
+                                    <div class="submit">
+                                 <input type="submit" name="submitplg13" <?php if ($_SESSION['dFInfo']['match13']['prolongation']['etat'][0] == false) { ?> disabled="disabled" <?php  } ?>>
+                                 </div>
+                                    </form>
+                           <?php } else {
                                     echo  $_SESSION['dFInfo']['match13']['prolongation']['scoreEquipe1'] . " - " . $_SESSION['dFInfo']['match13']['prolongation']['scoreEquipe2'];
                                 }
                                 ?>
-                            </button>
-                        </form>
+                            </div>
                     </div>
                     <table class="agbr">
                         <tr>
@@ -163,16 +172,20 @@ if (isset($_POST['submitplg14']) && $_SESSION['dFInfo']['match14']['prolongation
                     </tr>
                 </table>
                 <div class="score">
-                    <form action="" method="post">
-                        <button type="submit" title="click here" name="submit14" <?php if ($_SESSION['match14'][0] == false) { ?> disabled="disabled" class="score" <?php  } ?>>
-                            <?php if ($_SESSION["match14"][1] == false) {
-                                echo "JOUER";
-                            } else {
+                        <div id="btn">
+                            <?php if ($_SESSION["match14"][1] == false) { ?>
+                                <form action="" method="post">
+                                    <input type="number" min="0" max="10"  name="scr1M14" <?php if ($_SESSION['match14'][0] == false) { ?> disabled="disabled "<?php  } ?>> -
+                                    <input type="number" min="0" max="10"  name="scr2M14" <?php if ($_SESSION['match14'][0] == false) { ?> disabled="disabled " <?php  } ?>> 
+                                    <div class="submit">
+                                 <input type="submit" name="submit14" <?php if ($_SESSION['match14'][0] == false) { ?> disabled="disabled" class="score" <?php  } ?>>
+                                 </div>
+                                    </form>
+                            <?php  } else {
                                 echo  $_SESSION['dFInfo']['match14']['equipe1']['score'] . " - " . $_SESSION['dFInfo']['match14']['equipe2']['score'];
                             }
                             ?>
-                        </button>
-                    </form>
+                        </div>
                 </div>
                 <table class="agbr">
                     <tr>
@@ -195,16 +208,21 @@ if (isset($_POST['submitplg14']) && $_SESSION['dFInfo']['match14']['prolongation
                     </table>
                     <div class="score">
                         <form action="" method="post">
-                            <button type="submit" title="click here" name="submitplg14" <?php if ($_SESSION['dFInfo']['match14']['prolongation']['etat'][0] == false) { ?> disabled="disabled" class="score" <?php  } ?>>
+                            <div id="btn">
                                 <?php
-                                if ($_SESSION['dFInfo']['match14']['prolongation']['etat'][0]) {
-                                    echo "JOUER";
-                                } else {
+                                if ($_SESSION['dFInfo']['match14']['prolongation']['etat'][0]) { ?>
+                                   <form action="" method="post">
+                                    <input type="number" min="0" max="10"  name="scr1M14" <?php if ($_SESSION['dFInfo']['match14']['prolongation']['etat'][0]== false) { ?> disabled="disabled " class="score" <?php  } ?>> -
+                                    <input type="number" min="0" max="10"  name="scr2M14" <?php if ($_SESSION['dFInfo']['match14']['prolongation']['etat'][0]== false) { ?> disabled="disabled " class="score" <?php  } ?>> 
+                                    <div class="submit">
+                                 <input type="submit" name="submitplg14" <?php if ($_SESSION['dFInfo']['match14']['prolongation']['etat'][0] == false) { ?> disabled="disabled" <?php  } ?>>
+                                 </div>
+                                    </form>
+                              <?php  } else {
                                     echo  $_SESSION['dFInfo']['match14']['prolongation']['scoreEquipe1'] . " - " . $_SESSION['dFInfo']['match14']['prolongation']['scoreEquipe2'];
                                 }
                                 ?>
-                            </button>
-                        </form>
+                            </div>
                     </div>
                     <table class="agbr">
                         <tr>

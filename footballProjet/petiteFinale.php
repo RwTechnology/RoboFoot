@@ -47,17 +47,21 @@ if (isset($_POST['submitplg15']) && $_SESSION['PFinale']['match15']['prolongatio
                     </tr>
                 </table>
                 <div class="score">
-                <form action="" method="post">
-                        <button type="submit" title="click here" name="submit15" <?php if ($_SESSION['match15'][0] == false) { ?> disabled="disabled" class="score" <?php  } ?>>
+                        <div id="btn">
                             <?php 
-                            if ($_SESSION["match15"][1] == false) {
-                                echo "JOUER";
-                            } else {
+                            if ($_SESSION["match15"][1] == false) { ?>
+                                 <form action="" method="post">
+                                    <input type="number" min="0" max="10"  name="scr1M15" <?php if ($_SESSION['match15'][0] == false) { ?> disabled="disabled " class="score" <?php  } ?>> -
+                                    <input type="number" min="0" max="10"  name="scr2M15" <?php if ($_SESSION['match15'][0] == false) { ?> disabled="disabled " class="score" <?php  } ?>> 
+                                    <div class="submit">
+                                 <input type="submit" name="submit15" <?php if ($_SESSION['match15'][0] == false) { ?> disabled="disabled" class="score" <?php  } ?>>
+                                 </div>
+                                </form>
+                          <?php  } else {
                                 echo  $_SESSION['PFinale']['match15']['equipe1']['score'] . " - " . $_SESSION['PFinale']['match15']['equipe2']['score'];
                             }
                             ?>
-                        </button>
-                    </form>
+                        </div>
                 </div>
                 <table class="agbr">
                     <tr>
@@ -79,17 +83,21 @@ if (isset($_POST['submitplg15']) && $_SESSION['PFinale']['match15']['prolongatio
                         </tr>
                     </table>
                     <div class="score">
-                        <form action="" method="post">
-                            <button type="submit" title="click here" name="submitplg15" <?php if ($_SESSION['PFinale']['match15']['prolongation']['etat'][0] == false) { ?> disabled="disabled" class="score" <?php  } ?>>
+                            <div id="btn">
                                 <?php
-                                if ($_SESSION['PFinale']['match15']['prolongation']['etat'][0]) {
-                                    echo "JOUER";
-                                } else {
+                                if ($_SESSION['PFinale']['match15']['prolongation']['etat'][0]) { ?>
+                                     <form action="" method="post">
+                                    <input type="number" min="0" max="10"  name="scr1M15" <?php if ($_SESSION['PFinale']['match15']['prolongation']['etat'][0]== false) { ?> disabled="disabled " class="score" <?php  } ?>> -
+                                    <input type="number" min="0" max="10"  name="scr2M15" <?php if ($_SESSION['PFinale']['match15']['prolongation']['etat'][0]== false) { ?> disabled="disabled " class="score" <?php  } ?>> 
+                                    <div class="submit">
+                                 <input type="submit" name="submitplg15" <?php if ($_SESSION['PFinale']['match15']['prolongation']['etat'][0] == false) { ?> disabled="disabled" <?php  } ?>>
+                                 </div>
+                                    </form>
+                              <?php  } else {
                                     echo  $_SESSION['PFinale']['match15']['prolongation']['scoreEquipe1'] . " - " . $_SESSION['PFinale']['match15']['prolongation']['scoreEquipe2'];
                                 }
                                 ?>
-                            </button>
-                        </form>
+                            </div>
                     </div>
                     <table class="agbr">
                         <tr>

@@ -16,9 +16,11 @@ $_SESSION['dFInfo']['match14']['equipe2']['drapeau'] = $_SESSION['groupeA'][1]["
 include 'source/qualifiant.php';
 function organisateurN2($niveau, $idmatch, $submit)
 {
+    $infoSc1='scr1M'.$idmatch;
+    $infoSc2='scr2M'.$idmatch;
 
-    $equipe2 = rand(0, 5);
-    $equipe1 = rand(0, 5);
+    $equipe1 = intval($_POST[$infoSc1]);
+    $equipe2 = intval($_POST[$infoSc2]); 
 
     $match = 'match' . $idmatch;
 
